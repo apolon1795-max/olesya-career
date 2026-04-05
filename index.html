@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Карьерная карта | Олеся 2026</title>
+    <title>Карьерная карта</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -11,7 +11,7 @@
             --secondary: #ec4899;
             --accent: #06b6d4;
             --bg: #f8fafc;
-            --glass: rgba(255, 255, 255, 0.9);
+            --glass: rgba(255, 255, 255, 0.95);
             --text-main: #1e293b;
         }
 
@@ -49,7 +49,7 @@
             border: 1px solid rgba(255,255,255,0.6);
         }
 
-        h2 { font-family: 'Montserrat', sans-serif; color: var(--primary); font-size: 1.8rem; border-left: 5px solid var(--secondary); padding-left: 15px; margin-bottom: 25px; }
+        h2 { font-family: 'Montserrat', sans-serif; color: var(--primary); font-size: 1.8rem; border-left: 6px solid var(--secondary); padding-left: 15px; margin-bottom: 25px; }
         h3 { font-family: 'Montserrat', sans-serif; color: var(--secondary); margin-top: 0; }
 
         /* VALUES GRID */
@@ -61,28 +61,28 @@
             font-size: 0.9rem;
             text-align: center;
             border: 1px solid #e2e8f0;
-            transition: 0.3s;
         }
-        .value-item.priority { background: #fdf2f8; border-color: var(--secondary); font-weight: 600; color: var(--secondary); transform: scale(1.05); }
+        .value-item.priority { background: #fdf2f8; border-color: var(--secondary); font-weight: 600; color: var(--secondary); transform: scale(1.02); }
 
         /* TABS FOR PROFESSIONS */
-        .tabs-nav { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+        .tabs-nav { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 25px; }
         .tab-btn {
-            padding: 12px 20px;
+            padding: 14px 24px;
             border: none;
             background: #e2e8f0;
-            border-radius: 12px;
+            border-radius: 14px;
             cursor: pointer;
-            font-weight: 600;
+            font-weight: 700;
             font-family: 'Montserrat', sans-serif;
-            transition: 0.3s;
+            transition: all 0.3s ease;
         }
-        .tab-btn.active { background: var(--primary); color: white; }
+        .tab-btn:hover { background: #cbd5e1; }
+        .tab-btn.active { background: var(--primary); color: white; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4); }
 
-        .tab-content { display: none; animation: slideUp 0.4s ease-out; }
+        .tab-content { display: none; animation: fadeIn 0.5s ease-out; }
         .tab-content.active { display: block; }
 
-        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
         /* ROADMAP STEPS */
         .roadmap-step { position: relative; padding-left: 30px; border-left: 2px solid #cbd5e1; margin-bottom: 30px; }
@@ -95,95 +95,98 @@
             border-radius: 50%;
             border: 4px solid white;
         }
-        .roadmap-step h4 { margin: 0 0 10px 0; color: var(--primary); font-size: 1.1rem; }
+        .roadmap-step h4 { margin: 0 0 10px 0; color: var(--primary); font-size: 1.15rem; font-weight: 700; }
 
         /* TABLE */
-        .table-wrapper { overflow-x: auto; }
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; border-radius: 15px; overflow: hidden; }
-        th, td { padding: 15px; text-align: left; border-bottom: 1px solid #e2e8f0; font-size: 0.9rem; }
-        th { background: #f1f5f9; color: var(--primary); font-weight: 700; }
+        .table-wrapper { overflow-x: auto; margin-top: 15px; }
+        table { width: 100%; border-collapse: collapse; background: white; border-radius: 15px; overflow: hidden; }
+        th, td { padding: 15px; text-align: left; border-bottom: 1px solid #e2e8f0; font-size: 0.95rem; }
+        th { background: #f1f5f9; color: var(--primary); font-weight: 800; text-transform: uppercase; font-size: 0.8rem; }
 
         /* PRINCIPLE BOX */
         .principle-card {
-            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            background: #1e293b;
             color: white;
-            padding: 40px;
-            border-radius: 30px;
+            padding: 50px 40px;
+            border-radius: 40px;
             text-align: center;
             margin-top: 50px;
+            border: 4px solid var(--primary);
         }
-        .principle-card h2 { color: #fbbf24; border: none; padding: 0; margin-bottom: 15px; font-size: 2.2rem; }
+        .principle-card h2 { color: #fbbf24; border: none; padding: 0; margin-bottom: 20px; font-size: 2.5rem; text-align: center; }
         
-        .focus-tags { display: flex; justify-content: center; gap: 15px; margin-top: 25px; flex-wrap: wrap; }
+        .focus-tags { display: flex; justify-content: center; gap: 20px; margin-top: 35px; flex-wrap: wrap; }
         .focus-tag {
-            background: rgba(255,255,255,0.1);
-            padding: 10px 25px;
+            background: var(--secondary);
+            padding: 12px 35px;
             border-radius: 50px;
-            font-weight: 700;
+            font-weight: 900;
             color: #fff;
-            border: 2px solid var(--secondary);
             text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 0 15px rgba(236, 72, 153, 0.3);
+            letter-spacing: 2px;
+            font-size: 1.1rem;
+            box-shadow: 0 0 20px rgba(236, 72, 153, 0.6);
+            border: 2px solid #fff;
         }
 
-        .check-item { margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px; }
-        .check-item::before { content: '✦'; color: var(--secondary); font-weight: bold; }
+        .check-item { margin-bottom: 10px; display: flex; align-items: flex-start; gap: 12px; }
+        .check-item::before { content: '✔'; color: var(--secondary); font-weight: bold; flex-shrink: 0; }
 
-        footer { text-align: center; padding: 40px; color: #64748b; font-size: 0.9rem; }
+        footer { text-align: center; padding: 50px; color: #64748b; font-size: 1rem; font-weight: 500; }
 
         @media (max-width: 768px) {
             header h1 { font-size: 2.2rem; }
             .tabs-nav { flex-direction: column; }
+            .focus-tag { font-size: 0.9rem; padding: 10px 20px; }
         }
     </style>
 </head>
 <body>
 
 <div class="container">
+    
     <!-- 1. ВВОДНОЕ ОПИСАНИЕ -->
     <header>
-        <h1>Олеся 2026</h1>
-        <p>Активная, творческая и общительная личность. Твой путь к самореализации, ярким впечатлениям и гибкому стилю жизни начинается здесь.</p>
+        <h1>Карьерная карта</h1>
+        <p>Олеся — активная, творческая и общительная личность. Твой путь к самореализации, ярким впечатлениям и гибкому стилю жизни.</p>
     </header>
 
     <section class="card">
-        <h2>1. Кто я?</h2>
-        <p>Олеся ориентирована на взаимодействие с людьми и выступления на сцене. 
-        Увлечения (танцы, уход за собой, мероприятия, контент в соц.сетях) формируют картину целей: работа должна быть творческой, социальной, гибкой, с возможностью влиять на результаты и получать эмоциональное удовлетворение.</p>
-        <p><strong>Потребности:</strong> Развитие навыков, самореализация, гибкий график, путешествия и насыщенные впечатления.</p>
+        <h2>1. Вводное описание</h2>
+        <p>Олеся ориентирована на самореализацию, яркие впечатления и взаимодействие с людьми. Основные интересы: танцы, уход за собой (краситься, ногти), общение с друзьями, участие в мероприятиях, выступления на сцене и просмотр актуального контента в соц.сетях.</p>
+        <p>Эти увлечения помогают формировать картину целей: работа должна быть творческой, социальной, гибкой, с возможностью влиять на результаты и получать эмоциональное удовлетворение. Потребности включают развитие навыков, самореализацию, гибкий график, путешествия и насыщенные впечатления.</p>
     </section>
 
     <!-- 2. ЦЕННОСТИ -->
     <section class="card">
-        <h2>2. Мои ценности</h2>
+        <h2>2. Ценности</h2>
         <div class="values-grid">
             <div class="value-item priority">1. Любовь</div>
-            <div class="value-item priority">2. Счастливая семья</div>
+            <div class="value-item priority">2. Счастливая семейная жизнь</div>
             <div class="value-item priority">3. Здоровье</div>
             <div class="value-item">4. Хорошие друзья</div>
             <div class="value-item priority">5. Самореализация</div>
             <div class="value-item priority">6. Интересная работа</div>
             <div class="value-item priority">7. Развитие</div>
-            <div class="value-item">8. Материальная жизнь</div>
-            <div class="value-item">9. Гармония</div>
+            <div class="value-item">8. Материально обеспеченная жизнь</div>
+            <div class="value-item">9. Внутренняя гармония</div>
             <div class="value-item">10. Свобода</div>
             <div class="value-item">11. Счастье других</div>
-            <div class="value-item">12. Признание</div>
+            <div class="value-item">12. Общественное признание</div>
             <div class="value-item">13. Развлечение</div>
             <div class="value-item">14. Познание мира</div>
             <div class="value-item">15. Творчество</div>
             <div class="value-item">16. Жизненная мудрость</div>
-            <div class="value-item">17. Красота и искусство</div>
-            <div class="value-item">18. Активная жизнь</div>
+            <div class="value-item">17. Красота природы и искусство</div>
+            <div class="value-item">18. Активная деятельная жизнь</div>
         </div>
-        <p style="margin-top:20px; font-size: 0.9rem; color: #64748b;"><i>*Приоритетные ценности определяют выбор профессий с эмоциональным удовлетворением и гибкостью.</i></p>
+        <p style="margin-top:20px; font-size: 0.95rem; background: #f1f5f9; padding: 15px; border-radius: 12px;"><strong>Приоритетные:</strong> Любовь, семейные отношения, здоровье, самореализация, интересная работа и развитие. Эти ценности определяют выбор профессий, которые дают эмоциональное удовлетворение и гибкий график.</p>
     </section>
 
     <!-- 3. СИЛЬНЫЕ СТОРОНЫ -->
     <section class="card">
         <h2>3. Сильные стороны и склонности</h2>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
             <div>
                 <h3>Сильные стороны:</h3>
                 <div class="check-item">Общительность</div>
@@ -196,8 +199,10 @@
                 <div class="check-item">Творчество</div>
             </div>
             <div>
-                <h3>Склонности:</h3>
-                <p>Работа в сферах туризма, медиа, развлечений и спорта. Социальная деятельность, организация событий, художественные проекты.</p>
+                <h3>Склонности и предпочтения:</h3>
+                <div class="check-item">Работа в сферах туризма, медиа, развлечений и спорта</div>
+                <div class="check-item">Социальная и креативная деятельность</div>
+                <div class="check-item">Организация событий, художественные проекты, коммуникация с людьми</div>
             </div>
         </div>
     </section>
@@ -205,197 +210,208 @@
     <!-- 4. ИДЕАЛЬНАЯ ЖИЗНЬ -->
     <section class="card">
         <h2>4. Образ идеальной жизни</h2>
+        <h3>Идеальный рабочий день:</h3>
         <div class="roadmap-step">
-            <h4>Утро (9:00 - 11:00)</h4>
+            <h4>09:00 — 11:00</h4>
             <p>Подъём, спокойный завтрак, утренние процедуры.</p>
         </div>
         <div class="roadmap-step">
-            <h4>День (11:00 - 18:00)</h4>
+            <h4>11:00 — 18:00</h4>
             <p>Работа в зале с людьми, на мероприятиях или в креативных проектах. Самостоятельное планирование задач.</p>
         </div>
         <div class="roadmap-step">
             <h4>Вечер</h4>
             <p>Отдых, встречи с друзьями, свободное время для личных интересов.</p>
         </div>
-        <p><strong>Стиль жизни:</strong> Гибкий график, возможность путешествовать, важность семьи и личного развития.</p>
+        <div style="background: #fdf2f8; padding: 20px; border-radius: 15px; border: 1px solid var(--secondary);">
+            <p><strong>Стиль жизни:</strong> Гибкий график, возможность путешествовать, социальные и творческие проекты, важность семьи, друзей и личного развития.</p>
+        </div>
     </section>
 
-    <!-- 5 & 6. ПРОФЕССИОНАЛЬНЫЕ НАПРАВЛЕНИЯ И КАРТЫ -->
+    <!-- 5. ПОДХОДЯЩИЕ НАПРАВЛЕНИЯ -->
     <section class="card">
-        <h2>5. Профессиональные направления</h2>
-        <p>Нажми на кнопку, чтобы открыть подробную дорожную карту:</p>
+        <h2>5. Подходящие профессиональные направления</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px;">
+            <div style="padding:15px; background:white; border-radius:12px; border:1px solid #e2e8f0;">
+                <strong>1. Ведущий / Event-менеджер</strong><br><small>Общительность и стрессоустойчивость.</small>
+            </div>
+            <div style="padding:15px; background:white; border-radius:12px; border:1px solid #e2e8f0;">
+                <strong>2. Дизайнер / Стилист</strong><br><small>Творчество и работа руками.</small>
+            </div>
+            <div style="padding:15px; background:white; border-radius:12px; border:1px solid #e2e8f0;">
+                <strong>3. Тренер / Хореограф</strong><br><small>Танцы и работа с людьми.</small>
+            </div>
+            <div style="padding:15px; background:white; border-radius:12px; border:1px solid #e2e8f0;">
+                <strong>4. Психолог</strong><br><small>Эмпатия и работа с эмоциями.</small>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. ДОРОЖНЫЕ КАРТЫ -->
+    <section class="card">
+        <h2>6. Дорожные карты по каждому направлению</h2>
+        <p>Выбери направление, чтобы изучить подробный план развития:</p>
         
         <div class="tabs-nav">
-            <button class="tab-btn active" onclick="openTab(event, 'prof1')">1. Event-менеджер</button>
-            <button class="tab-btn" onclick="openTab(event, 'prof2')">2. Дизайнер / Стилист</button>
-            <button class="tab-btn" onclick="openTab(event, 'prof3')">3. Хореограф / Тренер</button>
-            <button class="tab-btn" onclick="openTab(event, 'prof4')">4. Психолог</button>
+            <button class="tab-btn active" onclick="openTab(event, 'road1')">Event-менеджмент</button>
+            <button class="tab-btn" onclick="openTab(event, 'road2')">Дизайн и Стиль</button>
+            <button class="tab-btn" onclick="openTab(event, 'road3')">Фитнес и Танцы</button>
+            <button class="tab-btn" onclick="openTab(event, 'road4')">Психология</button>
         </div>
 
-        <!-- EVENT -->
-        <div id="prof1" class="tab-content active">
-            <h3>🎉 Ведущий / Event-менеджер</h3>
-            <p><strong>Подходит:</strong> Общительность, креативность, стрессоустойчивость.</p>
-            <p><strong>Навыки:</strong> Публичные выступления, планирование, SMM, бюджет.</p>
-            
+        <!-- ROADMAP 1: EVENT -->
+        <div id="road1" class="tab-content active">
             <div class="roadmap-step">
-                <h4>9–11 класс</h4>
-                <div class="check-item">Помощник организатора в школьных/городских событиях (Ижевск).</div>
-                <div class="check-item">Курсы по коммуникации и SMM.</div>
-                <div class="check-item">Портфолио: фото, видео, отзывы.</div>
+                <h4>📍 9–11 класс</h4>
+                <div class="check-item">Пробовать себя в школьных и городских мероприятиях (ведущий, ассистент).</div>
+                <div class="check-item">Участвовать в локальных событиях Ижевска (концерты, фестивали).</div>
+                <div class="check-item">Курсы по публичным выступлениям и основам SMM.</div>
+                <div class="check-item">Начать собирать портфолио (фото/видео, отзывы).</div>
             </div>
             <div class="roadmap-step">
-                <h4>Колледж (после 9 класса)</h4>
-                <p>Направления: Сервис, Туризм, Гостиничное дело, Продюсирование.</p>
-                <div class="check-item">Практика в event-командах и PR-отделах.</div>
-                <div class="check-item">Портфолио: 10–20 событий.</div>
+                <h4>📍 После 9 класса (Колледж)</h4>
+                <p>Направления: Менеджмент, Сервис, Гостиничное дело, Туризм.</p>
+                <div class="check-item">Практика в event-агентствах и отделах маркетинга.</div>
+                <div class="check-item">Развивать портфолио: 10–20 событий к концу учебы.</div>
             </div>
             <div class="roadmap-step">
-                <h4>Вуз</h4>
-                <p>Направления: Event-менеджмент, PR, Реклама.</p>
-                <div class="check-item">Стажировки в крупных компаниях.</div>
-                <div class="check-item">20+ крупных кейсов, работа с бюджетами.</div>
+                <h4>📍 Вуз / Дальнейшее образование</h4>
+                <p>Направления: Event management, PR и реклама, Сервис.</p>
+                <div class="check-item">Стажировки в крупных компаниях, управление бюджетами.</div>
+                <div class="check-item">Развивать портфолио: 20+ кейсов.</div>
             </div>
         </div>
 
-        <!-- DESIGN -->
-        <div id="prof2" class="tab-content">
-            <h3>🎨 Креативный дизайнер / Декоратор</h3>
-            <p><strong>Подходит:</strong> Творчество, работа руками, художественное мышление.</p>
-            <p><strong>Навыки:</strong> Photoshop, Illustrator, теория цвета, композиция.</p>
-            
+        <!-- ROADMAP 2: DESIGN -->
+        <div id="road2" class="tab-content">
             <div class="roadmap-step">
-                <h4>9–11 класс</h4>
-                <div class="check-item">Создание декораций для школьных спектаклей и фотозон.</div>
-                <div class="check-item">Курсы по графическому дизайну.</div>
+                <h4>📍 9–11 класс</h4>
+                <div class="check-item">Оформление школьных фотозон, праздников, создание декораций.</div>
+                <div class="check-item">Курсы Photoshop, Illustrator, теория цвета и композиция.</div>
+                <div class="check-item">Эксперименты с декором комнаты и аксессуарами.</div>
             </div>
             <div class="roadmap-step">
-                <h4>Колледж (после 9 класса)</h4>
-                <p>Направления: Дизайн, Декор интерьера, Стилистика образов.</p>
-                <div class="check-item">Практика оформления фестивалей и студенческих пространств.</div>
+                <h4>📍 После 9 класса (Колледж)</h4>
+                <p>Направления: Дизайн, Декоративно-прикладное творчество, Стилистика образов.</p>
+                <div class="check-item">Участие в оформлении городских фестивалей и студенческих пространств.</div>
                 <div class="check-item">Портфолио: 10+ работ (эскизы, фото проектов).</div>
             </div>
             <div class="roadmap-step">
-                <h4>Вуз</h4>
-                <p>Направления: Дизайн среды, Fashion, Сценический дизайн.</p>
-                <div class="check-item">10+ крупных проектов оформления.</div>
-                <div class="check-item">Участие в выставках и работа под заказ.</div>
+                <h4>📍 Вуз / Дальнейшее образование</h4>
+                <p>Направления: Дизайн среды, Архитектура интерьера, Fashion Design.</p>
+                <div class="check-item">10+ крупных проектов, участие в выставках и конкурсах.</div>
+                <div class="check-item">Работа с реальными заказчиками по оформлению.</div>
             </div>
         </div>
 
-        <!-- FITNESS -->
-        <div id="prof3" class="tab-content">
-            <h3>💃 Фитнес-тренер / Хореограф</h3>
-            <p><strong>Подходит:</strong> Физическая активность, любовь к танцам, работа с людьми.</p>
-            <p><strong>Навыки:</strong> Педагогика, анатомия, мотивация, организация тренировок.</p>
-            
+        <!-- ROADMAP 3: FITNESS -->
+        <div id="road3" class="tab-content">
             <div class="roadmap-step">
-                <h4>9–11 класс</h4>
-                <div class="check-item">Регулярные тренировки, ведение мастер-классов для друзей.</div>
-                <div class="check-item">Дневник прогресса, основы первой помощи.</div>
+                <h4>📍 9–11 класс</h4>
+                <div class="check-item">Регулярные тренировки в танцевальных/спортивных секциях.</div>
+                <div class="check-item">Проведение мини мастер-классов для друзей/одноклассников.</div>
+                <div class="check-item">Начальные курсы: базовая педагогика, первая помощь.</div>
             </div>
             <div class="roadmap-step">
-                <h4>Колледж (после 9 класса)</h4>
-                <p>Направления: Физкультура, Хореография, Фитнес.</p>
-                <div class="check-item">Ведение групп начального уровня, лагеря, клубы.</div>
-                <div class="check-item">Получение сертификатов инструктора.</div>
+                <h4>📍 После 9 класса (Колледж)</h4>
+                <p>Направления: Физическая культура, Хореография, Фитнес.</p>
+                <div class="check-item">Практика ведения групп в школах или детских лагерях.</div>
+                <div class="check-item">Получение сертификатов фитнес-инструктора.</div>
             </div>
             <div class="roadmap-step">
-                <h4>Вуз</h4>
-                <p>Направления: Педагогика спорта, Wellness-менеджмент.</p>
-                <div class="check-item">Углубленная анатомия, психология активности.</div>
-                <div class="check-item">Международная сертификация тренера.</div>
+                <h4>📍 Вуз / Дальнейшее образование</h4>
+                <p>Направления: Педагогика спорта, Хореография, Wellness-менеджмент.</p>
+                <div class="check-item">Изучение анатомии, физиологии и психологии активности.</div>
+                <div class="check-item">Создание портфолио программ тренировок и видео занятий.</div>
             </div>
         </div>
 
-        <!-- PSYCHOLOGIST -->
-        <div id="prof4" class="tab-content">
-            <h3>🧠 Психолог (Альтернатива)</h3>
-            <p><strong>Подходит:</strong> Эмпатия, умение слушать, работа с эмоциями.</p>
-            <p><strong>Навыки:</strong> Аналитика, конфликтология, диагностика.</p>
-            
+        <!-- ROADMAP 4: PSYCHOLOGY -->
+        <div id="road4" class="tab-content">
             <div class="roadmap-step">
-                <h4>9–11 класс</h4>
-                <div class="check-item">Участие в школьных психологических кружках.</div>
-                <div class="check-item">Волонтёрство, дневник наблюдений за поведением людей.</div>
+                <h4>📍 9–11 класс</h4>
+                <div class="check-item">Участие в школьных психологических кружках и волонтерство.</div>
+                <div class="check-item">Базовые курсы по общению, эмпатии и управлению стрессом.</div>
+                <div class="check-item">Ведение дневника наблюдений за поведением людей.</div>
             </div>
             <div class="roadmap-step">
-                <h4>Колледж / СПО</h4>
+                <h4>📍 После 11 класса / Колледж</h4>
                 <p>Направления: Социальная работа, Педагогика.</p>
-                <div class="check-item">Ассистирование психологам, работа с группами сверстников.</div>
-                <div class="check-item">Курсы по эмпатии и активному слушанию.</div>
+                <div class="check-item">Помощь психологам, организация групп поддержки.</div>
+                <div class="check-item">Изучение основ конфликтологии и активного слушания.</div>
             </div>
             <div class="roadmap-step">
-                <h4>Вуз</h4>
-                <p>Направления: Практическая психология, Психодиагностика.</p>
-                <div class="check-item">Практика в центрах поддержки и школах.</div>
-                <div class="check-item">Сертификация по направлениям (арт-терапия и др.).</div>
+                <h4>📍 Вуз / Дальнейшее образование</h4>
+                <p>Направления: Психология, Психолого-педагогическое образование.</p>
+                <div class="check-item">Практика в психологических службах, проведение консультаций под супервизией.</div>
+                <div class="check-item">Сертификация по узким направлениям (арт-терапия и т.д.).</div>
             </div>
         </div>
     </section>
 
-    <!-- 6. СЦЕНАРИИ -->
+    <!-- 7. СЦЕНАРИИ -->
     <section class="card">
         <h2>7. Сценарии поступления</h2>
         <div class="table-wrapper">
             <table>
                 <tr>
                     <th>Направление</th>
-                    <th>После 9 класса</th>
+                    <th>После 9 класса (Колледж)</th>
                     <th>После 11 класса (Вуз)</th>
-                    <th>Экзамены</th>
+                    <th>Экзамены / Требования</th>
                 </tr>
                 <tr>
-                    <td>Event</td>
-                    <td>Колледж «Туризм / Праздники»</td>
-                    <td>Вуз «Event менеджмент»</td>
-                    <td>Русский, Обществознание</td>
+                    <td>Event-менеджмент</td>
+                    <td>Организация праздников / Туризм</td>
+                    <td>Event менеджмент / PR</td>
+                    <td>Русский, Обществознание, Портфолио</td>
                 </tr>
                 <tr>
-                    <td>Дизайнер</td>
-                    <td>Колледж «Дизайн / Декор»</td>
-                    <td>Вуз «Дизайн / Fashion»</td>
-                    <td>Русский, Творческий конкурс</td>
+                    <td>Стилист / Дизайнер</td>
+                    <td>Дизайн / Декор / Моделирование</td>
+                    <td>Дизайн среды / Fashion / Visual</td>
+                    <td>Русский, Рисунок (творческое зад.), Портфолио</td>
                 </tr>
                 <tr>
-                    <td>Фитнес</td>
-                    <td>Колледж «Физкультура»</td>
-                    <td>Вуз «Хореография / Спорт»</td>
-                    <td>Русский, Физкультура</td>
+                    <td>Фитнес / Танцы</td>
+                    <td>Физкультура / Хореография</td>
+                    <td>Педагогика спорта / Хореография</td>
+                    <td>Русский, Физкультура (нормативы), Творч. испыт.</td>
                 </tr>
                 <tr>
                     <td>Психолог</td>
-                    <td>Курсы / Соц. работа</td>
-                    <td>Вуз «Психология»</td>
-                    <td>Русский, Биология/Общество</td>
+                    <td>Социальная работа / Педагогика</td>
+                    <td>Психология / Практическая псих.</td>
+                    <td>Русский, Биология / Обществознание</td>
                 </tr>
             </table>
         </div>
     </section>
 
-    <!-- 7. РЕКОМЕНДАЦИИ -->
+    <!-- 8. РЕКОМЕНДАЦИИ -->
     <section class="card">
         <h2>8. Рекомендации и конкретные действия</h2>
         
-        <h3>🟢 До окончания 9 класса (Исследование)</h3>
-        <div class="check-item">Пробовать разные роли через кружки и городские квесты.</div>
-        <div class="check-item">Встречаться с профи: ассистировать на ивентах.</div>
-        <div class="check-item">Начать учить английский язык (база для будущего).</div>
-        <div class="check-item">Развивать Soft Skills: публичные выступления, лидерство.</div>
-        <div class="check-item">Вести дневник проектов и анализировать успехи.</div>
+        <h3>🟢 До окончания 9 класса (Цель: Исследование)</h3>
+        <div class="check-item">Пробовать разные профессии через школу, кружки и мастер-классы.</div>
+        <div class="check-item">Ассистировать на городских мероприятиях, брать небольшие проекты.</div>
+        <div class="check-item">Создавать личное портфолио: фото, видео, черновики идей.</div>
+        <div class="check-item">Начать изучать английский язык и развивать публичные выступления.</div>
 
-        <h3 style="margin-top:20px;">🟡 После 9 класса (Углубление)</h3>
-        <div class="check-item">Выбрать маршрут: 10-11 класс или колледж.</div>
-        <div class="check-item">Стажировки, волонтёрство, помощь в реальных проектах.</div>
-        <div class="check-item">Участвовать в конкурсах и фестивалях.</div>
-        <div class="check-item">Систематически наполнять портфолио (фото + отзывы).</div>
+        <h3 style="margin-top:25px;">🟡 После 9 класса (Цель: Углубление)</h3>
+        <div class="check-item">Определиться с маршрутом: 10–11 класс или Колледж → Вуз.</div>
+        <div class="check-item">Продолжать практику: стажировки, волонтёрство, мини-проекты.</div>
+        <div class="check-item">Участвовать в профессиональных конкурсах и фестивалях.</div>
+        <div class="check-item">Систематически собирать отзывы наставников и организаторов.</div>
     </section>
 
-    <!-- ГЛАВНЫЙ ПРИНЦИП -->
+    <!-- 9. ГЛАВНЫЙ ПРИНЦИП -->
     <section class="principle-card">
-        <h2>⚡ Главный принцип</h2>
-        <p><strong>До конца 9 класса</strong> — пробуй разные роли, исследуй интересы, формируй портфолио. <br>
-        <strong>После 9 класса</strong> — определись с маршрутом, углубляй практику и стажируйся.</p>
+        <h2>9. ⚡ Главный принцип</h2>
+        <p style="font-size: 1.2rem; line-height: 1.8;">
+            <strong>До окончания 9 класса</strong> — пробуй разные профессии, исследуй интересы, формируй портфолио, развивай коммуникацию. <br><br>
+            <strong>После 9 класса</strong> — определись с маршрутом обучения, углубляй практику, стажируйся и расширяй профессиональное портфолио.
+        </p>
         
         <div class="focus-tags">
             <div class="focus-tag">ТВОРЧЕСТВО</div>
@@ -405,12 +421,12 @@
     </section>
 
     <footer>
-        © Карьерная карта Олеси • 2026 • Ижевск и весь мир
+        Карьерная карта Олеси • 2026 • Сделано для твоего успеха
     </footer>
 </div>
 
 <script>
-    function openTab(evt, tabName) {
+    function openTab(evt, tabId) {
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tab-content");
         for (i = 0; i < tabcontent.length; i++) {
@@ -421,8 +437,8 @@
         for (i = 0; i < tablinks.length; i++) {
             tablinks[i].classList.remove("active");
         }
-        document.getElementById(tabName).style.display = "block";
-        document.getElementById(tabName).classList.add("active");
+        document.getElementById(tabId).style.display = "block";
+        document.getElementById(tabId).classList.add("active");
         evt.currentTarget.classList.add("active");
     }
 </script>
